@@ -1,22 +1,31 @@
-# Meus Projetos de Power BI
+# PowerBI-DSA
+Repositório com os projetos e anotações do curso de Power BI da Data Science Academy.
 
-Este repositório é uma coleção dos meus projetos e estudos em Business Intelligence, focados na ferramenta Microsoft Power BI. Cada pasta representa um projeto distinto, com seu próprio dashboard, fontes de dados e documentação.
+## Projetos
 
-## 🚀 Projetos
+### Capítulo 02: Dashboard de Vendas Simples
 
-Abaixo está a lista de projetos desenvolvidos. Para adicionar um novo projeto, copie e cole o template a seguir, preenchendo com as informações relevantes.
+Neste capítulo, o foco foi a criação de um dashboard a partir de uma única fonte de dados.
 
----
+**Habilidades e Conceitos:**
 
-### 📁 [Nome do Projeto]
+*   **Fontes de Dados:**
+    *   Importação de dados de arquivos de texto (`.csv`).
+    *   Importação de dados de planilhas Excel (`.xlsx`).
+*   **Visualização de Dados:**
+    *   Criação de um dashboard com visuais básicos (gráficos, tabelas).
+    *   Formatação de dados (moeda, datas).
 
-**Descrição:** (Breve descrição do projeto, seus objetivos e os principais insights gerados).
+### Capítulo 03: Dashboard de Vendas com Modelo Relacional
 
-**Habilidades Demonstradas:**
-*   (Ex: Modelagem de Dados, DAX Avançado, ETL com Power Query, etc.)
-*   (Tópico 2)
-*   (Tópico 3)
+O segundo projeto avança para um cenário mais complexo, utilizando múltiplas fontes de dados que se relacionam.
 
-**Link para o Projeto:** `[Acessar Projeto](./caminho-para-a-pasta-do-projeto/)`
+**Habilidades e Conceitos:**
 
----
+*   **Fontes de Dados:**
+    *   Importação e tratamento de dados de múltiplos arquivos (`.csv`).
+*   **Modelagem de Dados:**
+    *   Criação de um **modelo de dados relacional** (esquema estrela).
+    *   Definição de relacionamentos entre tabelas fato (`Vendas`, `Pedidos`) e tabelas dimensão (`Clientes`, `Produtos`).
+*   **DAX (Data Analysis Expressions):**
+    *   Potencial para a criação de medidas e colunas calculadas para análises mais profundas (ex: Total de Vendas, Quantidade por Categoria).
