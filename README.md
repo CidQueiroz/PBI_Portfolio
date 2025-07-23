@@ -1,5 +1,5 @@
-# PowerBI-DSA
-Repositório com os projetos e anotações do curso de Power BI da Data Science Academy.
+# PowerBI
+Repositório com projetos e anotações de Power BI.
 
 ## Projetos
 
