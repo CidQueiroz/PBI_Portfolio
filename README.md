@@ -28,6 +28,18 @@ Este repositório serve como uma demonstração das minhas habilidades em Busine
 - **Descrição:** Dashboard para análise de dados logísticos, com foco em otimização de rotas, custos de transporte e eficiência operacional.
 - **Habilidades:** ETL, modelagem de dados, criação de KPIs de logística, e visualização de dados para identificar gargalos e oportunidades de melhoria na cadeia de suprimentos.
 
+### Projeto 7: Análise Financeira
+- **Descrição:** Dashboard para análise de DRE e Fluxo de Caixa, com foco em margem de lucro, EBITDA e rentabilidade por centro de custo.
+- **Habilidades:** ETL, modelagem de dados, DAX para métricas financeiras, e visualização de dados para análise da saúde financeira da empresa.
+
+### Projeto 8: Análise de Balanço Patrimonial
+- **Descrição:** Dashboard para análise da estrutura de capital da empresa, com foco em liquidez, endividamento e ROI.
+- **Habilidades:** ETL, modelagem de dados, DAX para métricas de balanço patrimonial, e visualização de dados para análise da saúde financeira e da capacidade de pagamento da empresa.
+
+### Projeto 9: Análise de Mercado de Ações
+- **Descrição:** Dashboard para análise de dados do mercado de ações, permitindo o acompanhamento de cotações e o cálculo de indicadores.
+- **Habilidades:** Web Scraping, modelagem de dados, DAX para indicadores de mercado, e visualização de dados para análise de tendências.
+
 ## Ferramentas e Tecnologias
 
 - **Microsoft Power BI:** Ferramenta principal para ETL, modelagem, análise e visualização de dados.
