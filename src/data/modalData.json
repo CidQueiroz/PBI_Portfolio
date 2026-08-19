@@ -139,5 +139,17 @@
     ],
     "isContact": true,
     "redirectUrl": ""
+  },
+  "app1-button": {
+    "id": "app1-button",
+    "title": "Nome do App 1",
+    "description": "<p>Descrição do seu novo app 1.</p>",
+    "hidden": true
+  },
+  "app2-button": {
+    "id": "app2-button",
+    "title": "Nome do App 2",
+    "description": "<p>Descrição do seu novo app 2.</p>",
+    "hidden": true
   }
 }

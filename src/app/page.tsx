@@ -7,7 +7,13 @@ import CircuitPoint from '@/components/CircuitPoint';
 import modalData from '@/data/modalData.json';
 
 type ModalId = keyof typeof modalData;
-type ModalInfo = (typeof modalData)[ModalId] & { isContact?: boolean; external?: boolean };
+type ModalInfo = (typeof modalData)[ModalId] & { 
+  isContact?: boolean; 
+  external?: boolean;
+  redirectUrl?: string;
+  keywords?: string[];
+  hidden?: boolean;
+};
 
 // Componente de conteúdo para o modal genérico
 const GenericModalContent = ({ modalContent }: { modalContent: ModalInfo | null }) => {
@@ -74,7 +80,8 @@ export default function Home() {
     if (searchQuery.length > 0) {
       const filtered = Object.values(modalData).filter(item => {
         const query = searchQuery.toLowerCase();
-        const hasKeyword = item.keywords.some(keyword => keyword.toLowerCase().includes(query));
+        const itemWithTypes = item as unknown as ModalInfo;
+        const hasKeyword = itemWithTypes.keywords?.some(keyword => keyword.toLowerCase().includes(query)) || false;
         return item.title.toLowerCase().includes(query) || hasKeyword;
       });
       setSearchResults(filtered);
@@ -145,7 +152,7 @@ export default function Home() {
 
           {Object.keys(modalData).map((key) => {
             const id = key as ModalId;
-            const point = modalData[id];
+            const point = modalData[id] as unknown as ModalInfo;
             const originalPoints: { [id: string]: { top: string, left: string, emoji: string } } = {
               'automacao-button': { top: '12%', left: '50%', emoji: '🤖' },
               'papodados-button': { top: '24%', left: '84%', emoji: '📊' },
@@ -155,9 +162,12 @@ export default function Home() {
               'integracao-button': { top: '80%', left: '23%', emoji: '🔗' },
               'senseidb-button': { top: '48%', left: '10%', emoji: '🧠' },
               'suporte-button': { top: '31%', left: '18%', emoji: '🛠️' },
+              'app1-button': { top: '50%', left: '50%', emoji: '🚀' }, // Altere o top/left e emoji
+              'app2-button': { top: '50%', left: '50%', emoji: '📱' }, // Altere o top/left e emoji
             };
             const style = originalPoints[id];
-            if (!style) return null;
+            // Se não tiver estilo ou se a flag "hidden" estiver como true no JSON, não renderiza
+            if (!style || point.hidden) return null;
 
             return (
               <CircuitPoint
