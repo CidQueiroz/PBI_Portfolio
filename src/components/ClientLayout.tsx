@@ -5,6 +5,22 @@ import { Header, Footer, ContactModal, ThemeProvider, ModalProvider } from '@cid
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+const customSobreLinks = [
+  { href: '/sobre', text: 'Filosofia & Identidade', external: false },
+  { href: '/pbi', text: 'Portfólio de Dashboards', external: false },
+  { href: '/portfolio', text: 'Laboratório de Projetos', external: false },
+  { href: '/certificados', text: 'Certificados', external: false },
+];
+
+const customUniversoLinks = [
+  { href: '/', text: 'CDK TECK (Home)', external: false, disabled: false },
+  { href: 'https://papodados.cdkteck.com.br', text: 'PapoDados', external: true, disabled: true },
+  { href: 'https://cacapreco.cdkteck.com.br', text: 'Caça-Preço', external: true, disabled: true },
+  { href: 'https://senseidb.cdkteck.com.br', text: 'SenseiDB', external: true, disabled: false },
+  { href: 'https://gestaorpd.cdkteck.com.br', text: 'Gestão RPD', external: true, disabled: false },
+  { href: 'https://biocoach.cdkteck.com.br', text: 'BioCoach', external: true, disabled: true },
+];
+
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const pathname = usePathname();
@@ -24,6 +40,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         {!isHomePage && <Header 
           LinkComponent={NextLink}
           usePathname={() => pathname}
+          customSobreLinks={customSobreLinks}
+          customUniversoLinks={customUniversoLinks}
           />}
         
         <main>{children}</main>
