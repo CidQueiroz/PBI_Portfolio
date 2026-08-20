@@ -60,33 +60,35 @@ export default function PbiPage() {
 
   return (
     <div className="portfolio-page">
-      <PageHeader
-        title="Portfólio de Dashboards"
-        description="Explore projetos onde dados ganham forma, sentido e propósito."
-      />
+      <div className="sovereign-layout-container">
+        <PageHeader
+          title="Portfólio de Dashboards"
+          description="Explore projetos onde dados ganham forma, sentido e propósito."
+        />
 
-      <div className="card-grid">
-        {pbiProjects.map((project) => (
-          <div key={project.id} className="card project-card" onClick={() => handleCardClick(project)}>
-            <div className="card-content">
-              <Image 
-                src={project.thumbnail} 
-                alt={`Thumbnail do projeto ${project.title}`} 
-                width={400} 
-                height={300} 
-                style={{ objectFit: 'cover' }} 
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjM0Q0ODU1IiAvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZGIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPkltYWdlbSBOb3QgRm91bmQ8L3RleHQ+Cjwvc3ZnPg==';
-                  target.alt = 'Placeholder para o dashboard';
-                }}
-              />
-              <div className="project-info">
-                <p>{project.description}</p>
+        <div className="card-grid">
+          {pbiProjects.map((project) => (
+            <div key={project.id} className="card project-card" onClick={() => handleCardClick(project)}>
+              <div className="card-content">
+                <Image 
+                  src={project.thumbnail} 
+                  alt={`Thumbnail do projeto ${project.title}`} 
+                  width={400} 
+                  height={300} 
+                  style={{ objectFit: 'cover' }} 
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjM0Q0ODU1IiAvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZGIiBmb250LXNpemU9IjI0IiBmb250LWZhbWlseT0iQXJpYWwiPkltYWdlbSBOb3QgRm91bmQ8L3RleHQ+Cjwvc3ZnPg==';
+                    target.alt = 'Placeholder para o dashboard';
+                  }}
+                />
+                <div className="project-info">
+                  <p>{project.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

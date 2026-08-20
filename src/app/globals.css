@@ -2,10 +2,10 @@
 
 /* Container de Layout Padrão para alinhar com o PageHeader */
 .sovereign-layout-container {
-  width: 100%;
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
   padding-bottom: 20px;
   box-sizing: border-box;
 }
@@ -15,6 +15,52 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
   width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: center;
+}
+
+.page-header .header-text {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+  align-items: center !important;
+}
+
+/* Centraliza os textos do cabeçalho com altíssima especificidade */
+body .sovereign-layout-container .page-header .header-text .titulo,
+body .sovereign-layout-container .page-header .header-text .subtitulo,
+body[data-theme='light'] .sovereign-layout-container .page-header .header-text .titulo,
+body[data-theme='light'] .sovereign-layout-container .page-header .header-text .subtitulo,
+body[data-theme='dark'] .sovereign-layout-container .page-header .header-text .titulo,
+body[data-theme='dark'] .sovereign-layout-container .page-header .header-text .subtitulo {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Força que os grids originais da UI acompanhem a nova largura */
+.sovereign-layout-container .card-grid {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 20px 0 !important;
+}
+
+.sovereign-layout-container .sovereign-card-grid {
+  padding: 0 !important;
+  margin: 20px 0 !important;
+}
+
+/* Expande o NarrativeCard na página Sobre para alinhar perfeitamente */
+.sovereign-layout-container .narrative-card-container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Força que a página sobre (AboutPage) do UI pacote obedeça o novo layout */
+.sovereign-layout-container>.portfolio-page>div {
   max-width: none !important;
 }
 
