@@ -91,7 +91,7 @@ export default function PortfolioPage() {
           {projects.map((project) => (
             <div key={project.id} className="card project-card" onClick={() => handleCardClick(project)}>
               <div className="card-content">
-                <Image src={project.thumbnail} alt={`Thumbnail do projeto ${project.title}`} width={150} height={200} style={{ objectFit: 'cover' }} />
+                <Image src={project.thumbnail} alt={`Thumbnail do projeto ${project.title}`} width={150} height={200} style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
                 <div className="project-info">
                   <p>{project.description}</p>
                 </div>
